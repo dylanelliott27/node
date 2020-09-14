@@ -9,7 +9,7 @@ const fs = require('fs');
 
   assert.throws(
     () => {
-      fs.createReadStream(null, { fd: fd });
+      fs.createReadStream(null, { fd });
     },
     {
       code: 'ERR_INVALID_ARG_TYPE',
@@ -18,7 +18,7 @@ const fs = require('fs');
 
   assert.throws(
     () => {
-      fs.createWriteStream(null, { fd: fd });
+      fs.createWriteStream(null, { fd });
     },
     {
       code: 'ERR_INVALID_ARG_TYPE',
